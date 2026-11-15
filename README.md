@@ -1,5 +1,9 @@
 # 拾光 CCD（Android）
 
+[English](README.en.md) | 简体中文
+
+![Android](https://github.com/HiMenma/shiguang-ccd/actions/workflows/android.yml/badge.svg)
+
 一个**自研**的 CCD 风格相机 App：实时 GPU 滤镜、6 个内置预设、10 项参数微调、相册导入编辑。
 不是 ProCCD 的复制品，也没有使用任何第三方相机 App 的代码、滤镜 LUT、UI 素材或音效。
 
