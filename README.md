@@ -86,6 +86,17 @@ adb shell am instrument -w -r app.shiguang.ccd.test/androidx.test.runner.Android
 
 本次交付的验证结果：JVM 单测 17 条通过；仪器测试 9 条通过（GL 身份渲染、黑白预设、6 预设渲染、时间戳、白边、相册写入/查询/读取等）。
 
+
+## CI 与发布
+
+GitHub Actions 在 push 到 `main`、提 PR、或手动触发时运行单测并构建 debug APK，产物可从
+Actions 的 artifact 下载；推送 `v*` 标签时，APK 会自动附到对应的 GitHub Release。
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
 ## 目录结构
 
 ```

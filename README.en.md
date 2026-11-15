@@ -108,6 +108,19 @@ Verified for this release: 17 JVM unit tests and 9 instrumented tests pass on an
 API 36 emulator (GL identity render, mono preset, all six presets, timestamp,
 paper border, gallery write/query/read).
 
+
+## CI and releases
+
+GitHub Actions runs the unit tests and builds a debug APK on every push to
+`main`, on pull requests, and on manual dispatch; the APK is attached to the run
+as an artifact. Pushing a `v*` tag publishes a GitHub Release with the APK
+attached.
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
 ## Project layout
 
 ```
