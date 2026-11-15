@@ -113,7 +113,10 @@ class CameraViewModel(application: Application) : AndroidViewModel(application) 
         if (_state.value.processing) return
         val snapshot = _state.value
         val params = snapshot.current
-        val mirror = snapshot.frontFacing
+        // The camera HAL already delivers front-camera JPEGs in the same
+        // orientation the user sees in the (mirrored) preview. Flipping here
+        // again would make the saved photo disagree with the viewfinder.
+        val mirror = false
         _state.update { it.copy(processing = true) }
         val app = getApplication<Application>()
         val key = "SG_${System.currentTimeMillis()}"

@@ -16,9 +16,12 @@ internal object ShaderSources {
         out vec2 vUv;
         void main() {
             gl_Position = vec4(aPos, 0.0, 1.0);
-            vec2 uv = (uTexMatrix * vec4(aUv, 0.0, 1.0)).xy;
+            // Mirror in texture space, *before* the camera transform. Applying
+            // it after the matrix turns a 180-degree front-camera rotation
+            // into a vertical flip (the "upside-down selfie" bug).
+            vec2 uv = aUv;
             if (uMirror > 0.5) uv.x = 1.0 - uv.x;
-            vUv = uv;
+            vUv = (uTexMatrix * vec4(uv, 0.0, 1.0)).xy;
         }
     """
 
