@@ -1,0 +1,14 @@
+.gradle/
+.gradle-home/
+.android-home/
+build/
+local.properties
+*.iml
+.idea/
+.DS_Store
+dist/*.apk
+.android-sdk/
+.emulator-home/
+.home/
+.kotlin/
+tools/*.zip
