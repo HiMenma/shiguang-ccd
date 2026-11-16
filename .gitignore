@@ -12,3 +12,4 @@ dist/*.apk
 .home/
 .kotlin/
 tools/*.zip
+.cache/

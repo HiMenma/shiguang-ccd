@@ -12,7 +12,7 @@ It is not a clone of ProCCD, and it contains no code, LUTs, UI assets, or sounds
 from any third-party camera app.
 
 - Package: `app.shiguang.ccd`
-- Version: 0.1.0 (versionCode 1)
+- Version: 0.1.1 (versionCode 2)
 - Min SDK: 26 (Android 8.0), arm64
 - Rendering: OpenGL ES 3.0
 - Permissions: `CAMERA` only — **no network permission**

@@ -42,6 +42,7 @@ import androidx.camera.core.CameraSelector
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.shiguang.ccd.BuildConfig
 import app.shiguang.ccd.camera.CameraSession
 import app.shiguang.ccd.camera.CcdSurfaceProcessor
 import app.shiguang.ccd.ui.theme.Amber
@@ -194,7 +195,7 @@ private fun CameraBody(
             ) {
                 Column {
                     Text("拾光 CCD", style = MaterialTheme.typography.labelMedium, color = Cream)
-                    LcdText("v0.1  ·  ${state.current.name}")
+                    LcdText("v${BuildConfig.VERSION_NAME}  ·  ${state.current.name}")
                 }
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     ToolbarButton(flashLabel(state)) {

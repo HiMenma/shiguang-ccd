@@ -8,7 +8,7 @@
 不是 ProCCD 的复制品，也没有使用任何第三方相机 App 的代码、滤镜 LUT、UI 素材或音效。
 
 - 包名：`app.shiguang.ccd`
-- 版本：0.1.0（versionCode 1）
+- 版本：0.1.1（versionCode 2）
 - 最低系统：Android 8.0（API 26），arm64
 - 渲染：OpenGL ES 3.0
 - 权限：仅 `CAMERA`；**不申请网络权限**

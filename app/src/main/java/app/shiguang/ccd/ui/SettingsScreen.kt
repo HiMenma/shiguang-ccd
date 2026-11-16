@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.shiguang.ccd.BuildConfig
 import app.shiguang.ccd.ui.theme.Amber
 import app.shiguang.ccd.ui.theme.Cream
 import app.shiguang.ccd.ui.theme.CreamDim
@@ -71,7 +72,7 @@ fun SettingsScreen(viewModel: CameraViewModel, onBack: () -> Unit) {
         Text("关于", style = MaterialTheme.typography.labelMedium, color = Cream)
         Spacer(Modifier.height(8.dp))
         Text(
-            "拾光 CCD 0.1\n" +
+            "拾光 CCD ${BuildConfig.VERSION_NAME}\n" +
                 "自研 CCD 风格相机：实时 GPU 滤镜、6 个内置预设、10 项参数微调、相册导入编辑。\n\n" +
                 "本应用不申请网络权限，不收集任何数据。所有照片只保存在本机相册的「拾光CCD」目录。",
             style = MaterialTheme.typography.bodySmall,
