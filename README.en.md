@@ -80,6 +80,7 @@ On a normal machine you can simply run `./gradlew :app:assembleDebug`.
 source scripts/env.sh
 ./scripts/emulator.sh &      # creates the AVD on first run
 ./scripts/smoke.sh           # install, grant camera, launch, screenshot, crash check
+./scripts/stop-emulator.sh   # stop it (pkill fallback; adb's console token differs)
 ```
 
 Install the system image once if needed:

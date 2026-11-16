@@ -61,6 +61,7 @@ source scripts/env.sh
 source scripts/env.sh
 ./scripts/emulator.sh &      # 首次运行会自动创建 AVD（需要已安装系统镜像）
 ./scripts/smoke.sh           # 安装、授权、启动、截图、检查崩溃
+./scripts/stop-emulator.sh   # 关闭模拟器（用 pkill 兜底，避免 adb emu kill 的 token 不匹配）
 ```
 
 系统镜像安装命令（只需一次）：
